@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqlc86uaja2vq"]
+
+[ext_resource type="Script" uid="uid://cbruq3utgcy68" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://bmcq4b0l7voui" path="res://flappy-bird-assets/sprites/bluebird-downflap.png" id="2_i3pqv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
+radius = 16.0
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 7.62939e-06)
+scale = Vector2(0.713235, 1.04167)
+texture = ExtResource("2_i3pqv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_onrkg")
